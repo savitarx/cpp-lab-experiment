@@ -1,0 +1,163 @@
+#include<iostream>
+using namespace std;
+class bank_account{
+public:
+   char name[20];
+   long long unsigned int account_num;
+   char accounttype[4];
+   long int balance1;
+   long int balance2;
+   long int balance;
+   void deposit(void);
+   void withdraw(void);
+   void display(void);
+    
+}
+void bank_account::deposit(void){
+    cout<<"enter the amount to deposit"<<endl;
+    cin>>balance2;
+    cout<<"your amount is depositted"<<endl;
+    balance=balance1+balance2;
+}
+void bank_account::withdraw(void){
+    cout<<"enter the amount to withdraw";
+    cin>>balance2;
+    cout<<"receive your cash"<<endl;
+    balance=balance1-balance2;
+}
+void bank_account::display(){
+    cout<<name;
+    cout<<"your balance is :"<<balance<<endl;
+}
+int main(){
+    bank_account a;
+    cout<<"enter name"<<endl;
+    cin>>a.name;
+    cout<<"account number"<<endl;
+    cin>>a.account_num;
+    cout<<"enter the account type"<<endl;
+    cin>>a.accounttype;
+    cout<<"enter the balance amount"<<endl;
+    cin>>a.balance1;
+    cout<<"1.withdraw"<<endl<<"2.deposit"<<endl;
+    int choice;
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+        {
+        a.withdraw();
+        break;
+        }
+        case 2:
+        {
+        a.deposit();
+        break;
+        } }
+    a.display();
+    return 0;
+}
+
+b.#include<iostream>
+#include<string.h>
+using namespace std;
+class report{
+    private:
+    char adno[4];
+    string Name;
+    int marks[5];
+    int total;
+    public:
+    
+    
+void readinfo(){
+    cout<<"enter your name";
+    cin>>Name;
+    cout<<"enter the four digit admission number";
+    cin>>adno;
+    
+    for(int i=0;i<5;i++){
+        cout<<"enter mark "<<(i+1)<<" :";
+        cin>>marks[i];
+    }getavg(marks);
+    
+}
+int getavg(int marks[])
+{  
+    total=0;
+    for(int i=0;i<5;i++){
+        total=total+marks[i];
+        
+        
+    }total=total/5;
+    return total;
+}
+void displayinfo(){
+    cout<<"Name :"<<Name<<endl;
+    cout<<"Admission number :"<<adno<<endl;
+    cout<<"Average marks :"<<total<<endl;
+    cout<<"THANK YOU";
+    
+}}
+int main(){
+    report c;
+    char a;
+    cout<<"Type y to start and n to end "<<endl;
+    cin>>a;
+    if(a=='Y' || a=='y'){
+        c.readinfo();
+        
+        c.displayinfo();
+        
+    }
+    else cout<<"Thank you"<<endl;
+    return 0;
+}
+
+
+
+
+c.#include<iostream>
+using namespace std;
+class test{
+    private:
+    int testcode;
+    string description;
+    int nocandidate;
+    int centerreqd;
+    private:
+    int calcntr(int nocandidate){
+    
+    centerreqd=(nocandidate/100)+1;
+    char a;
+    cout<<"enter y to display";
+    cin>>a;
+    if (a=='y'||a=='Y'){
+        disptest();
+    }
+    
+    }
+    public:
+    void schedule(){
+        cout<<"enter the test code"<<endl;
+        cin>>testcode;
+        cout<<"enter description"<<endl;
+        cin>>description;
+        cout<<"enter the number of candidates"<<endl;
+        cin>>nocandidate;
+        calcntr(nocandidate);
+    }
+    void disptest(){
+        cout<<"the test integer :"<<testcode<<endl;
+        cout<<"description :"<<description<<endl;
+        cout<<"no of candidates"<<nocandidate<<endl;
+        cout<<"center required"<<centerreqd<<endl;
+    }
+}
+int main(){
+    test a;
+    a.schedule();
+    return 0;
+}
+
+
